@@ -1,3 +1,29 @@
+Blockly.Blocks['takeoff'] = {
+  init: function() {
+    this.appendDummyInput()
+        .appendField("takeoff");
+    this.setInputsInline(true);
+    this.setPreviousStatement(true, null);
+    this.setNextStatement(true, null);
+    this.setColour(180);
+    this.setTooltip('');
+    this.setHelpUrl('');
+  }
+};
+
+Blockly.Blocks['land'] = {
+  init: function() {
+    this.appendDummyInput()
+        .appendField("land");
+    this.setInputsInline(true);
+    this.setPreviousStatement(true, null);
+    this.setNextStatement(true, null);
+    this.setColour(180);
+    this.setTooltip('');
+    this.setHelpUrl('');
+  }
+};
+
 Blockly.Blocks['pose'] = {
   init: function() {
     this.appendDummyInput()

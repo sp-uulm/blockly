@@ -1,3 +1,13 @@
+Blockly.Lua['takeoff'] = function(block) {
+	var code = 'takeoff()\n';
+	return code;
+};
+
+Blockly.Lua['land'] = function(block) {
+	var code = 'land()\n';
+	return code;
+};
+
 Blockly.Lua['pose'] = function(block) {
   var value_x = Blockly.Lua.valueToCode(block, 'x', Blockly.Lua.ORDER_ATOMIC);
   var value_y = Blockly.Lua.valueToCode(block, 'y', Blockly.Lua.ORDER_ATOMIC);

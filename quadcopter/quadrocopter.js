@@ -5,7 +5,7 @@ Blockly.Blocks['takeoff'] = {
     this.setInputsInline(true);
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
-    this.setColour(180);
+    this.setColour(0);
     this.setTooltip('');
     this.setHelpUrl('');
   }
@@ -18,7 +18,7 @@ Blockly.Blocks['land'] = {
     this.setInputsInline(true);
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
-    this.setColour(180);
+    this.setColour(0);
     this.setTooltip('');
     this.setHelpUrl('');
   }

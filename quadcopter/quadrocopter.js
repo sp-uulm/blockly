@@ -1,3 +1,19 @@
+Blockly.Blocks['liveEval'] = {
+  init: function() {
+    this.appendDummyInput()
+        .appendField("🔎");
+    this.appendValueInput("EXPRESSION")
+        .appendField("x");
+    this.appendDummyInput()
+        .appendField(new Blockly.FieldLabelSerializable("="), "VALUE");
+    this.setInputsInline(true);
+    this.setOutput(true);
+    this.setColour(230);
+ this.setTooltip("");
+ this.setHelpUrl("");
+  }
+};
+
 Blockly.Blocks['takeoff'] = {
   init: function() {
     this.appendDummyInput()

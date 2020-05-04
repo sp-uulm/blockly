@@ -26,6 +26,28 @@ new QWebChannel(qt.webChannelTransport,
 
         // connect signals
         bridge.highlight_block.connect(workspace.highlightBlock.bind(workspace));
+
+        bridge.highlight_field.connect(function(id, field) {
+            var block = workspace.getBlockById(id);
+            
+            if (block == null) {
+                bridge.log("could not find Block " + id);
+            } else {
+                Blockly.utils.dom.addClass( block.getField(field).fieldGroup_, "blocklyErrorField" );
+            }
+        });
+        
+        bridge.remove_highlights.connect(function() {
+            const blocks = workspace.getAllBlocks();
+            for (const i in blocks) {
+                const block = blocks[i];
+                const field = block.getField("NUM");
+                if (field != null) {
+                    Blockly.utils.dom.removeClass(field.fieldGroup_, "blocklyErrorField");
+                }
+            }
+        });
+        
         bridge.set_field_value.connect(function(id, field, value) {
             var block = workspace.getBlockById(id);
             if (block == null) {

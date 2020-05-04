@@ -1,3 +1,8 @@
+Blockly.Lua['liveEval'] = function(block) {
+	var code = 'eval()\n';
+	return code;
+};
+
 Blockly.Lua['takeoff'] = function(block) {
 	var code = 'takeoff()\n';
 	return code;

@@ -2,16 +2,16 @@ var toolbox = document.getElementById("toolbox");
 
 var options = {
 	toolbox : toolbox,
-	collapse : false,
+	collapse : true,
 	comments : false,
 	disable : false,
 	maxBlocks : Infinity,
 	trashcan : true,
-	horizontalLayout : false,
+	horizontalLayout : true,
 	toolboxPosition : 'start',
 	css : true,
 	rtl : false,
-	scrollbars : false,
+	scrollbars : true,
 	sounds : true,
 	oneBasedIndex : true
 };

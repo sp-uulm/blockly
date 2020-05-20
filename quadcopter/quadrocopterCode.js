@@ -3,6 +3,14 @@ Blockly.Lua['liveEval'] = function(block) {
 	return code;
 };
 
+Blockly.Lua['square'] = function(block) {
+  var value_value = Blockly.Lua.valueToCode(block, 'VALUE', Blockly.Lua.ORDER_ATOMIC);
+  // TODO: Assemble Lua into code variable.
+  var code = value_value + '^2';
+  // TODO: Change ORDER_NONE to the correct strength.
+  return [code, Blockly.Lua.ORDER_NONE];
+};
+
 Blockly.Lua['takeoff'] = function(block) {
 	var code = 'takeoff()\n';
 	return code;

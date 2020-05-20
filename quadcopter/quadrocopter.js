@@ -14,6 +14,21 @@ Blockly.Blocks['liveEval'] = {
   }
 };
 
+Blockly.Blocks['square'] = {
+  init: function() {
+    this.appendValueInput("VALUE")
+        .setCheck("Number")
+        .setAlign(Blockly.ALIGN_RIGHT);
+    this.appendDummyInput()
+        .appendField("^2");
+    this.setInputsInline(true);
+    this.setOutput(true, null);
+    this.setColour(230);
+ this.setTooltip("");
+ this.setHelpUrl("");
+  }
+};
+
 Blockly.Blocks['takeoff'] = {
   init: function() {
     this.appendDummyInput()
